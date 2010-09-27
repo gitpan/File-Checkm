@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               File-Checkm
-version:            0.01
+version:            0.02
 abstract:           checkm (command) and routines to manage manifests
 author:
     - John A. Kunze <jak@ucop.edu>
@@ -13,9 +13,6 @@ build_requires:
 requires:
     Carp:          0
     File::Find:    0
-    File::Glob:    0
-    File::OM:      0.21
-    File::Path:    0
     Getopt::Long:  0
     Pod::Usage:    0
 no_index:
