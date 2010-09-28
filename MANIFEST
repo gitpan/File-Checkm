@@ -1,9 +1,8 @@
-lib/File/Pairtree.pm
+lib/File/Checkm.pm
 Makefile.PL
 MANIFEST
 META.yml			Module meta-data (added by MakeMaker)
-pt
+checkm
 README
-t/i2p2.t
-t/pt.t
+t/checkm.t
 VERSION

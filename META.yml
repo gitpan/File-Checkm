@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               File-Checkm
-version:            0.02
+version:            v0.3.0
 abstract:           checkm (command) and routines to manage manifests
 author:
     - John A. Kunze <jak@ucop.edu>
