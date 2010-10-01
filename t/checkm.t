@@ -56,6 +56,9 @@ sub filval { my( $file, $value )=@_;	# $file must begin with >, <, or >>
 remake_td();
 my $x;
 
+$x = `$cmd -d $td --version`;
+like $x, qr|^v\d+\.\d+\.\d+$|m, 'version number correctly formatted';
+
 my $da = "abcdefg";
 my $db = "hi\njk\r\nlm\r\n";	# odd line ends
 # next contains Unicode smiley face
@@ -97,6 +100,7 @@ unless ($Win) {
 
 mkdir "$td/d";
 mkdir "$td/empty";
+
 
 $x = `$cmd -d $td over $td`;
 like $x, qr|^#%checkm_stats.*26\.3\+3\.0\.0|m,

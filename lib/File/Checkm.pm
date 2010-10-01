@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 our $VERSION;
-$VERSION = sprintf "%d.%02d", q$Name: Release-v0.3.0$ =~ /Release-(\d+)\.(\d+)\.(\d+)/;
+$VERSION = sprintf "%s", q$Name: Release-v0.3.2$ =~ /Release-(v\d+\.\d+\.\d+)/;
 
 my $checkm_version = "0.7";		# version number of checkm spec
 

@@ -129,6 +129,7 @@ my %opt = (
 	# XXX what if mani_digester can't be created? what if it's
 	# different from the regular digester?
 	$opt{alg} = lc $opt{algorithm};
+	$opt{alg} =~ tr/-//d;
 
 	my $cmd = shift @ARGV;
 	defined($cmd)		or help(), exit(1);
