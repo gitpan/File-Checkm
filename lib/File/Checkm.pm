@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 our $VERSION;
-$VERSION = sprintf "%s", q$Name: Release-v0.3.2$ =~ /Release-(v\d+\.\d+\.\d+)/;
+$VERSION = sprintf "%s", q$Name: Release-v0.3.3$ =~ /Release-(v\d+\.\d+\.\d+)/;
 
 my $checkm_version = "0.7";		# version number of checkm spec
 
@@ -237,8 +237,7 @@ sub make_digester { my( $algname )=@_;
 sub list_digesters {
 
 	my ($a, $digester, @ret);
-	for $a qw(
-			MD4/Digest::MD4
+	for $a ( qw(	MD4/Digest::MD4
 			MD5/Digest::MD5
 			SHA‐256/Digest::SHA2
 			SHA‐1/Digest::SHA
@@ -253,7 +252,7 @@ sub list_digesters {
 			CRC‐16/Digest::CRC
 			CRC‐32/Digest::CRC
 			MD5/Digest::Perl::MD5
-			CRC‐CCITT/Digest::CRC ) {
+			CRC‐CCITT/Digest::CRC ) ) {
 
 		my ($alg, $module) = split('/', $a);
 		# XXXXX why aren't these found ?
@@ -373,7 +372,7 @@ sub checkm_fileobj { my( $tpname, $wpname, $mtime )=@_;
 	$line .= $S;
 	$o_mtime and
 		$fields_left--,
-		($line .= $S . checkm_time($mtime));
+		($line .= checkm_time($mtime));
 	$fields_left <= 0	and return dprint $err, $line;
 
 	return dprint $err, $line;		# need this?

@@ -76,11 +76,11 @@ is $?, 0, "status good on simple checkm over";
 #$x = `$cmd -d $td over $td/a $td/b $td/c`;
 #is $?, 0, "status good on simple checkm over";
 
-like $x, qr|^#%checkm_stats.*26\.3\+0\.0\.0$|m,
+like $x, qr|^#%checkm_stats.*26\.3\+0\.0\.0|m,
 	"simple manifest of named files, no directories";
 
 $x = `$cmd -d $td over $td`;
-like $x, qr|^#%checkm_stats.*26\.3\+1\.0\.0$|m,
+like $x, qr|^#%checkm_stats.*26\.3\+1\.0\.0|m,
 	"simple manifest with oxum over one directory";
 
 $x = `$cmd -d $td over $td/a $td/b $td/a $td/b`;
